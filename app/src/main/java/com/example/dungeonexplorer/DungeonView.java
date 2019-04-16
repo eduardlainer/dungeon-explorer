@@ -4,7 +4,6 @@ import android.content.Context;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Color;
-import android.graphics.Paint;
 import android.graphics.Rect;
 import android.os.Handler;
 import android.util.AttributeSet;
@@ -43,7 +42,7 @@ public class DungeonView extends View implements Runnable {
                 BitmapFactory.decodeResource(getResources(), R.drawable.chibi_sprite),
                 new Rect(0, 2 * CHARACTER_SIZE, CHARACTER_SIZE, 3 * CHARACTER_SIZE),
                 new Rect(100, 100, 2 * CHARACTER_SIZE, 2 * CHARACTER_SIZE),
-                new Paint(),
+                null,
                 8);
     }
 
@@ -64,7 +63,7 @@ public class DungeonView extends View implements Runnable {
             } else {
                 currentFrame++;
             }
-            moveHandler.postDelayed(this, 50);
+            moveHandler.postDelayed(this, 100);
         }
     }
 
