@@ -8,7 +8,6 @@ import android.graphics.Rect;
 class Character {
 
     private final int CHARACTER_SIZE;
-    private final int MOVE_RATIO = 10;
 
     private Bitmap chibiSprite;
     private Rect sourceRect;
@@ -65,6 +64,8 @@ class Character {
     }
 
     void move(String direction, int currentFrame, int viewWidth, int viewHeight) {
+
+        int MOVE_RATIO = 10;
 
         switch (direction) {
             case "right":
