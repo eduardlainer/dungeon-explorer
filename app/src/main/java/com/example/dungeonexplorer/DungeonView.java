@@ -59,7 +59,8 @@ public class DungeonView extends View implements Runnable {
         invalidate();
         if (moving) {
             if (currentFrame >= chibi.getMovingFramesCount()) {
-                currentFrame = 0;
+                /* First frame(0) looks like it's for resting :)) */
+                currentFrame = 1;
             } else {
                 currentFrame++;
             }
